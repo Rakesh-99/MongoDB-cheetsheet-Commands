@@ -1,0 +1,112 @@
+
+                        MongoDB database commands : 
+                        ---------------------------
+
+1. show dbs : (To view the databases)
+-------------------------------------
+- It is a command to view all the databases currently we have .
+
+2. db : (View current database)
+--------------------------------
+- db command shows us in which database we are in right now. 
+
+3. use rakeshDB : (Create a new or switch database)
+---------------------------------------------------
+- This command will basically create a new database with the name of 'rakeshDB' and will switch to it.
+
+4. db.dropDatabase() || (To delete the database)
+-------------------------------------------------
+db.dropDatabase() is a function itsself, this command is used to drop or delete the database.
+
+
+
+                MongoDB Collection commands : 
+                ------------------------------
+
+1. db.createCollection('profile') :
+------------------------------------
+- This command will create a Collection named Hello. 
+
+2. db.profile.drop(): 
+-------------------
+- This command will drop or delete the Collection.
+
+3. show collections : 
+----------------------
+- This command will show the collections we have 
+
+
+
+
+
+
+            MongoDB commands for rows :
+            ---------------------------
+
+
+1. db.<collections name>.insert : (example of inserting one rows !)
+-------------------------------------------------------------------
+
+- Below example shows to create one row in collections.
+
+ex - 
+-----
+
+db.profile.instet = {
+    "name" : "Rakesh Kumar Parida",
+    "language": ["Java", "JavaScript"],
+    "cp" : "leetCode"
+}
+
+
+2. db.<collections name>.insert: (example of inserting any no of rows !)
+-------------------------------------------------------------------------
+- Below example shows to create any no. of rows in collections.
+
+
+ex-
+----
+
+
+db.profile.insert([
+    {
+        "id" : 0,
+        "name" : "Rakesh Kumar Parida",
+        "language" : ["Java", "JavaScript"],
+
+    },
+    {
+        "id" : 1,
+        "name" : "Bikash Kumar Parida",
+        "language" : ["Java", "Python"],
+
+    },
+    {
+        "id" : 2,
+        "name" : "Rajesh Kumar Parida",
+        "language" : ["C++", "JavaScript"],
+
+    },
+])
+
+
+
+3. db.profile.find() :
+----------------------
+- It shows us all the rows we insert in collections .
+
+
+
+
+
+        Search in MongoDB database : 
+        -----------------------------
+
+1. db.profile.find({"name": "Rakesh Kumar Parida"})
+
+-- it will show the row whose name match with 'Rakesh Kumar Parida'
+
+2. db.profile.find({"language" : "Java"})
+
+-- it will show the rows which rows are matched the language "Java". 
+ 
