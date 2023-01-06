@@ -59,9 +59,9 @@ db.profile.instet = {
 }
 
 
-2. db.<collections name>.insert: (example of inserting any no of rows !)
+2. db.<collections name>.insert: (example of inserting multiple no of rows !)
 -------------------------------------------------------------------------
-- Below example shows to create any no. of rows in collections.
+- Below example shows to create multiple no. of rows in collections.
 
 
 ex-
@@ -102,11 +102,41 @@ db.profile.insert([
         Search in MongoDB database : 
         -----------------------------
 
-1. db.profile.find({"name": "Rakesh Kumar Parida"})
 
--- it will show the row whose name match with 'Rakesh Kumar Parida'
+1. db.profile.find({"name": "Rakesh Kumar Parida"})
+-----------------------------------------------------
+
+- it will show the row whose name match with 'Rakesh Kumar Parida'
+
 
 2. db.profile.find({"language" : "Java"})
+------------------------------------------
 
--- it will show the rows which rows are matched the language "Java". 
- 
+- it will show the rows which rows are matched the language "Java". 
+
+
+3.db.profile.find.limit(2) : 
+------------------------------
+- This command will show only two rows in collections because we have the limit function here which is taking 2 in the parameter.
+
+
+4.db.profile.find().count():
+-----------------------------
+- This command shows how many rows we have in our collections.
+
+
+
+5. Updation one row : 
+----------------------
+db.profile.updateOne({'name': 'Rakesh'}, {{$set: {'name': 'Bikash'}}})
+-----------------------------------------------------------------------
+- This command will update one matching row in collections
+
+
+
+6. deletions in rows:
+----------------------
+db.profile.deleteOne({'name':'Bikash'})
+----------------------------------------
+- This command deletes the matching row from the collections
+
